@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">AndroidProject</string>
 
-    <string name="homeFragmentString">Home</string>
-    <string name="a">AndroidProject</string>
+    <string name="homeFragmentTitle">Home</string>
+    <string name="videoPlaybackFragmentTitle">Video Playback</string>
     <string name="b">AndroidProject</string>
 
 </resources>

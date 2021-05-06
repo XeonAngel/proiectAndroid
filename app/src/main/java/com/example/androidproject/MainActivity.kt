@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.androidproject.fragments.HomeFragment
+import com.example.androidproject.fragments.VideoPlaybackFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val homeFragment = HomeFragment()
+        val videoPlaybackFragment = VideoPlaybackFragment()
 
         makeCurrentFragment(homeFragment)
 
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.ic_home -> makeCurrentFragment(homeFragment)
+                R.id.ic_videoPlayback -> makeCurrentFragment(videoPlaybackFragment)
             }
             true
         }
