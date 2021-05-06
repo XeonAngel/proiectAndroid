@@ -1,10 +1,18 @@
 package com.example.androidproject.fragments
 
+import android.app.Activity
+import android.content.Intent
+import android.database.Cursor
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.MediaController
+import android.widget.VideoView
 import com.example.androidproject.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -22,6 +30,9 @@ class VideoPlaybackFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var button: Button
+    private lateinit var videoView: VideoView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,8 +45,34 @@ class VideoPlaybackFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_video_playback, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_video_playback, container, false)
+
+        videoView = rootView.findViewById(R.id.videoView)
+        button = rootView.findViewById(R.id.pickVideoButton)
+        button.setOnClickListener {
+            val intent = Intent()
+            intent.type = "video/*"
+            intent.action = Intent.ACTION_GET_CONTENT
+            startActivityForResult(intent, 101)
+        }
+
+
+        return rootView
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK && data != null) {
+            if (requestCode == 101) {
+                val uri: Uri = data.data!!
+                videoView.setVideoURI(uri)
+                val mediaController = MediaController(activity)
+                videoView.setMediaController(mediaController)
+                videoView.requestFocus()
+                videoView.start()
+
+            }
+        }
     }
 
     companion object {
