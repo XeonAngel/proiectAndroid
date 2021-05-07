@@ -3,6 +3,7 @@
 
     <string name="homeFragmentTitle">Home</string>
     <string name="videoPlaybackFragmentTitle">Video Playback</string>
-    <string name="b">AndroidProject</string>
+    <string name="firebaseMoviesFragment">All Movies</string>
+    <string name="favoriteMoviesFragment">Favorite Movies</string>
 
 </resources>
