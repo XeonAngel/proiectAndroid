@@ -12,7 +12,7 @@ import com.example.androidproject.adapters.FirebaseMovieAdapter
 import com.example.androidproject.models.FirebaseMovie
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-
+// TODO: Delete all Firebase things
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
