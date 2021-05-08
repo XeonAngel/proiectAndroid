@@ -4,14 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidproject.R
 import com.example.androidproject.adapters.FirebaseMovieAdapter
 import com.example.androidproject.models.FirebaseMovie
-import com.google.firebase.database.*
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,7 +62,18 @@ class FirebaseMoviesFragment : Fragment() {
 
     private fun getMovies() {
         database = FirebaseDatabase.getInstance().getReference("movies")
-        database.addValueEventListener(object : ValueEventListener {
+        database.get()
+            .addOnSuccessListener { movie ->
+                if (movie != null)
+                {
+                    for (movieSnapshot in movie.children) {
+                        val movieVal = movieSnapshot.getValue(FirebaseMovie::class.java)
+                        movieList.add(movieVal!!)
+                    }
+                    recyclerView.adapter = adapter
+                }
+            }
+        /*database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     for (movieSnapshot in snapshot.children) {
@@ -80,7 +91,7 @@ class FirebaseMoviesFragment : Fragment() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-        })
+        })*/
     }
 
     companion object {
