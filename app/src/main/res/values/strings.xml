@@ -2,8 +2,22 @@
     <string name="app_name">AndroidProject</string>
 
     <string name="homeFragmentTitle">Home</string>
+
     <string name="videoPlaybackFragmentTitle">Video Playback</string>
+
     <string name="jsonMoviesFragment">Search a movie</string>
+
+    <string name="imbd_id">IMBD id:</string>
+    <string name="movie_title">Movie title:</string>
+
+    <string name="add_movie_score">Movie score</string>
+    <string name="saveButtonText">Save</string>
+    <string name="empty_not_saved">Add movie score before add to collection</string>
+    <string name="inserted">Movie was successfully inserted</string>
+    <string name="updated">Movie was successfully updated</string>
+
+
     <string name="favoriteMoviesFragment">Favorite Movies</string>
+    <string name="addButtonText">Add movie to collection</string>
 
 </resources>

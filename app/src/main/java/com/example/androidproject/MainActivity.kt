@@ -7,6 +7,7 @@ import com.example.androidproject.fragments.FavoriteMoviesFragment
 import com.example.androidproject.fragments.HomeFragment
 import com.example.androidproject.fragments.JsonMoviesFragment
 import com.example.androidproject.fragments.VideoPlaybackFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         makeCurrentFragment(homeFragment)
 
         val bottomNavigation =
-            findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_navigation)
+            findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.ic_home -> makeCurrentFragment(homeFragment)
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun makeCurrentFragment(fragment: Fragment) =
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fl_wrapper, fragment)
+            replace(R.id.fl_content, fragment)
             commit()
         }
 }

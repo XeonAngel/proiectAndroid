@@ -1,5 +1,7 @@
 package com.example.androidproject.models
 
 interface DbObject {
-    val id:Int
+    var title: String
+    var year: String
+    var imdbID: String
 }

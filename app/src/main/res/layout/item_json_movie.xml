@@ -5,68 +5,68 @@
     <data>
         <variable
             name="isMovie"
-            type="com.example.androidproject.models.FirebaseMovie" />
+            type="com.example.androidproject.models.JsonMovie" />
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/white"
         android:scrollbars="vertical"
-        app:cardCornerRadius="5dp">
+        app:cardCornerRadius="10dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/firebaseMovieNameLabel"
+                android:id="@+id/jsonMovieNameLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Movie name: "
+                android:text="@string/movie_title"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/firebaseMovieName"
+                android:id="@+id/jsonMovieName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@{isMovie.name}"
+                android:text="@{isMovie.title}"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/firebaseMovieNameLabel"
+                app:layout_constraintStart_toEndOf="@+id/jsonMovieNameLabel"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/firebaseMovieCategoryLabel"
+                android:id="@+id/jsonMovieImbdIdLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Category name: "
+                android:text="@string/imbd_id"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/firebaseMovieNameLabel" />
+                app:layout_constraintTop_toBottomOf="@id/jsonMovieNameLabel" />
 
             <TextView
-                android:id="@+id/firebaseMovieCategory"
+                android:id="@+id/jsonMovieImbdId"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@{isMovie.category}"
+                android:text="@{isMovie.imdbID}"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/firebaseMovieCategoryLabel"
-                app:layout_constraintTop_toBottomOf="@+id/firebaseMovieName" />
+                app:layout_constraintStart_toEndOf="@+id/jsonMovieImbdIdLabel"
+                app:layout_constraintTop_toBottomOf="@+id/jsonMovieName" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

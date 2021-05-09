@@ -8,17 +8,17 @@
 
     <item
         android:id="@+id/ic_allMovies"
-        android:icon="@drawable/ic_firebasemovies"
+        android:icon="@drawable/ic_movie_search"
         android:title="@string/jsonMoviesFragment" />
 
     <item
         android:id="@+id/ic_favoriteMovies"
-        android:icon="@drawable/ic_favoritemovies"
+        android:icon="@drawable/ic_favorite_movies"
         android:title="@string/favoriteMoviesFragment" />
 
     <item
         android:id="@+id/ic_videoPlayback"
-        android:icon="@drawable/ic_videoplayback"
+        android:icon="@drawable/ic_video_playback"
         android:title="@string/videoPlaybackFragmentTitle" />
 
 </menu>
