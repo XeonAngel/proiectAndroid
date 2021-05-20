@@ -25,6 +25,14 @@
             app:layout_constraintTop_toBottomOf="@+id/jsonMovieSearch"
             tools:listitem="@layout/item_json_movie" />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/search"
+            android:alpha=".65"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

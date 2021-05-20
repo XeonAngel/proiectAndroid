@@ -3,21 +3,36 @@
 
     <item
         android:id="@+id/ic_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:icon="@drawable/ic_home"
         android:title="@string/homeFragmentTitle" />
 
     <item
         android:id="@+id/ic_allMovies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:icon="@drawable/ic_movie_search"
         android:title="@string/jsonMoviesFragment" />
 
     <item
         android:id="@+id/ic_favoriteMovies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:icon="@drawable/ic_favorite_movies"
         android:title="@string/favoriteMoviesFragment" />
 
     <item
+        android:id="@+id/ic_captureImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/ic_baseline_photo_camera_24"
+        android:title="@string/captureImageFragmentTitle" />
+
+    <item
         android:id="@+id/ic_videoPlayback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:icon="@drawable/ic_video_playback"
         android:title="@string/videoPlaybackFragmentTitle" />
 
