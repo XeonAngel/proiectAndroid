@@ -79,6 +79,17 @@
 
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/shareBtn"
+        android:layout_width="85dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="310dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="25dp"
+        android:alpha=".45"
+        android:text="@string/share"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/purple_700"/>
 
 
 </FrameLayout>

@@ -7,6 +7,8 @@
     <string name="textHome">In this application you can search for any movie you want, you can create your own list of favorite movies and why not, you can create a movie yourself.</string>
 
     <string name="captureImageFragmentTitle">Capture image</string>
+    <string name="camera">Camera</string>
+    <string name="share">Share</string>
 
     <string name="videoPlaybackFragmentTitle">Video Playback</string>
 
