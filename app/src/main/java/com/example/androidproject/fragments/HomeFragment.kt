@@ -31,7 +31,7 @@ class HomeFragment : Fragment() {
         shareBtn.setOnClickListener(View.OnClickListener {
             val sendIntent: Intent = Intent().apply {
                 action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT,"In this application you can search for any movie you want, you can create your own list of favorite movies and why not, you can create a movie yourself.")
+                putExtra(Intent.EXTRA_TEXT,getString(R.string.textHome))
                 type = "text/plain"
             }
 
