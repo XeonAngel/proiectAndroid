@@ -3,8 +3,7 @@ Forgacea Raluca-Maria
 Modrogeanu Cosmin-Ionuț
 
 Am ales sa dezvoltam o aplicatie Android in Kotlin despre filme.
-Modularizarea activității se face prin intermediul a mai multor fragmente,
-asigurand astfel consistenta și flexibilitatea aplicatiei. 
+Modularizarea activității se face prin intermediul a mai multor fragmente, asigurand astfel consistenta și flexibilitatea aplicatiei. 
 Meniul din partea de jos are 5 butoane pentru fiecare fragment din aplicatie(metoda de navigatie: Bottom Navigation)
 Buton de:
 1. Home - deschide fragmentul initial cu buton de share pentru textul din descriere (Implementarea metodei de Share - Android Sharesheet)
